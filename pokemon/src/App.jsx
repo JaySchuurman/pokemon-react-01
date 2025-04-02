@@ -1,4 +1,9 @@
 const App = () => {
-  return <div>App</div>
+
+
+
+
+  
+  return <div className='text-5xl'>App</div>
 };
-export default App;
+export default App
