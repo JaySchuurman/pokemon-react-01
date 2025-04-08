@@ -1,12 +1,14 @@
 body {
-    background: linear-gradient(to right, #123ab5, #b644c3);
+    background: linear-gradient(to right, #123ab5, #cfd51f, #d11f1f);
   }
   
   header {
+    color: #000;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 50px;
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
   }
   
   .logo {
@@ -41,7 +43,7 @@ body {
     text-decoration: none;
     font-size: 16px;
     transition: color 0.3s ease;
-    text-transform: capitalize;
+    text-transform: lowercase;
   }
   
   .pokemon-item a:hover {

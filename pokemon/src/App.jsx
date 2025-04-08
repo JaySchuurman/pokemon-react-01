@@ -1,37 +1,62 @@
 import "./App.css";
-import pokemonData from "./pokemonapi.json";
-import React, { useState } from "react";
+
+
+import React, { useState, useEffect } from "react";
+
+const POKEMON_API_URL = "https://pokeapi.co/api/v2/pokemon?limit=1302";
 
 function App() {
-  const [pokemonList, setPokemonList] = useState(pokemonData.results);
+  const [pokemonList, setPokemonList] = useState([]);
   const [searchTerm, setSearchTerm] = useState("");
   const [selectedPokemon, setSelectedPokemon] = useState(null);
 
+  // Fetch Pokémon list on mount
+  useEffect(() => {
+    const fetchPokemonList = async () => {
+      try {
+        const response = await fetch(POKEMON_API_URL);
+        const data = await response.json();
+        setPokemonList(data.results);
+      } catch (error) {
+        console.error("Error fetching Pokémon list:", error);
+      }
+    };
+
+    fetchPokemonList();
+  }, []);
+
   const filteredPokemonList = pokemonList.filter((pokemon) =>
-    pokemon.name.includes(searchTerm)
+    pokemon.name.includes(searchTerm.toLowerCase())
   );
 
   const showPokemon = async (url) => {
-    const response = await fetch(url);
-    if (!response.ok) {
-      console.error(`Error fetching Pokemon: ${response.statusText}`);
-      return;
+    try {
+      const response = await fetch(url);
+      if (!response.ok) {
+        console.error(`Error fetching Pokémon: ${response.statusText}`);
+        return;
+      }
+      const data = await response.json();
+      setSelectedPokemon(data);
+    } catch (error) {
+      console.error("Error fetching Pokémon details:", error);
     }
-
-    const data = await response.json();
-    setSelectedPokemon(data);
   };
 
   return (
     <div className="App">
       <header>
+        <h1> Click on a <img src="Pokemon-Logo.png" alt="huh" /> to see its Stats! </h1>
       </header>
 
       <main>
         <div className="search-container">
-          <input className="search-box" type="text" placeholder="Search..." 
-          value={searchTerm} 
-          onChange={event => setSearchTerm(event.target.value)}
+          <input
+            className="search-box"
+            type="text"
+            placeholder="Search..."
+            value={searchTerm}
+            onChange={(event) => setSearchTerm(event.target.value)}
           />
         </div>
 
@@ -56,8 +81,8 @@ function App() {
         )}
 
         <ul>
-          {filteredPokemonList.map((pokemon) => (
-            <li key={pokemon.id} className="pokemon-item">
+          {filteredPokemonList.map((pokemon, index) => (
+            <li key={index} className="pokemon-item">
               <a href="#" onClick={() => showPokemon(pokemon.url)}>
                 {pokemon.name}
               </a>
