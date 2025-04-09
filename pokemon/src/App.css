@@ -1,20 +1,30 @@
 body {
-    background: linear-gradient(to right, #123ab5, #cfd51f, #d11f1f);
+    background: linear-gradient(to left, #2d8cff, #f26d21);
   }
   
-  header {
+  /* header {
     color: #000;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    font-size: 50px;
+    font-size: 46px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  } */
+  
+  .header-text{
+    color: #000;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 46px;
     display: flex;
     justify-content: center;
     align-items: center;
   }
-  
-  .logo {
-    margin: 0 2rem 0 0;
+
+  .pokemon-logo{
+    display: flex;
+    justify-content: center;
   }
-  
+
   .search-container {
     display: flex;
     justify-content: center;
@@ -41,6 +51,7 @@ body {
   .pokemon-item a {
     color: #000;
     text-decoration: none;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     font-size: 16px;
     transition: color 0.3s ease;
     text-transform: lowercase;

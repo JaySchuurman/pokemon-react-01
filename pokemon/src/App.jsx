@@ -1,6 +1,6 @@
 import "./App.css";
-
-
+import Header from "./components/Header";
+import Selected from "./components/Selected";
 import React, { useState, useEffect } from "react";
 
 const POKEMON_API_URL = "https://pokeapi.co/api/v2/pokemon?limit=1302";
@@ -44,22 +44,10 @@ function App() {
   };
 
   return (
-    <div className="App">
-      <header>
-        <h1> Click on a <img src="Pokemon-Logo.png" alt="huh" /> to see its Stats! </h1>
-      </header>
-
+    <>
+      <Header/>
+      {/* <Selected/> */}
       <main>
-        <div className="search-container">
-          <input
-            className="search-box"
-            type="text"
-            placeholder="Search..."
-            value={searchTerm}
-            onChange={(event) => setSearchTerm(event.target.value)}
-          />
-        </div>
-
         {selectedPokemon && (
           <div className="pokemon-details">
             <h2>{selectedPokemon.name}</h2>
@@ -80,6 +68,15 @@ function App() {
           </div>
         )}
 
+        <div className="search-container">
+          <input
+            className="search-box"
+            type="text"
+            placeholder="Search..."
+            value={searchTerm}
+            onChange={(event) => setSearchTerm(event.target.value)}
+          />
+        </div>
         <ul>
           {filteredPokemonList.map((pokemon, index) => (
             <li key={index} className="pokemon-item">
@@ -90,7 +87,7 @@ function App() {
           ))}
         </ul>
       </main>
-    </div>
+    </>
   );
 }
 
