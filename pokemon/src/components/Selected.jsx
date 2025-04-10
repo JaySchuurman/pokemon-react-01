@@ -1,9 +1,9 @@
 import React from 'react'
 
 const Selected = () => {
-  return (
-    <>
-    <main>
+  return(
+  <>
+  <main>
         {selectedPokemon && (
           <div className="pokemon-details">
             <h2>{selectedPokemon.name}</h2>
@@ -24,7 +24,8 @@ const Selected = () => {
           </div>
         )}
         </main>
-       </>
+  </>
   )
 }
+
 export default Selected
