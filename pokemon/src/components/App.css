@@ -1,5 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Tint&family=Roboto:ital,wght@0,800;1,800&display=swap');
+
 body {
-    background: linear-gradient(to left, #2d8cff, #f26d21);
+    background: linear-gradient(to bottom,#2196F3, #EAB308);
   }
   
   /* header {
@@ -11,14 +13,14 @@ body {
     align-items: center;
   } */
 
-  .header-text{
+  .header-text {
     color: #000;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    font-size: 46px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 30px;
     display: flex;
     justify-content: center;
     align-items: center;
-  }
+  }  
 
   .pokemon-logo{
     display: flex;
@@ -51,8 +53,7 @@ body {
   .pokemon-item a {
     color: #000;
     text-decoration: none;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    font-size: 16px;
+    font-family: 'Roboto', sans-serif;    font-size: 16px;
     transition: color 0.3s ease;
     text-transform: lowercase;
   }

@@ -5,9 +5,9 @@ const Header = () => {
     <>
     <div className="App"></div>
       <header>
-        <div className="pokemon-logo"><img src="Pokemon-Logo.png" alt="huh"/></div>
+
         <div className="header-text">
-        <h1> Click on your favourite Pokemon to see its Stats! </h1>
+        <h1> Use these buttons to browse between different Pokemon and to search your favourites! </h1>
         </div>
       </header>
       </>
