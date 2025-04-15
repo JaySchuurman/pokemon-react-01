@@ -11,7 +11,7 @@ const NavButtons = () => {
                 Browse trough a list of different Pokemon.
               </p>
               <a
-                href="Job.jsx"
+                href="App.jsx"
                 class="inline-block bg-black text-white rounded-lg px-4 py-2 hover:bg-red-500"
               >
                 Take me there!
@@ -23,7 +23,7 @@ const NavButtons = () => {
                 Use this to filter out the Pokemon that suits your liking!
               </p>
               <a
-                href="Jobs.jsx"
+                href="Search.jsx"
                 class="inline-block bg-black text-white rounded-lg px-4 py-2 hover:bg-red-500"
               >
                 Let's go!

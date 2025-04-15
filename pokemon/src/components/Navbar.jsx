@@ -14,18 +14,27 @@ const Navbar = () => {
               <div class="md:ml-auto">
                 <div class="flex space-x-2">
                   <a
-                    href="Job.jsx"
+                    href="App.jsx"
                     class="text-white bg-black hover:bg-red-500 hover:text-black rounded-md px-3 py-2"
                   >
                     Home
                   </a>
                   <a
-                    href="Job.jsx"
+                    href="App.jsx"
                     class="text-white hover:bg-red-500 hover:text-white rounded-md px-3 py-2"
                   >
                     Pokemon
                   </a>
-                  <a href="Job.jsx" class="text-white hover:bg-red-500 hover:text-white rounded-md px-3 py-2">
+                  <a
+                    href="Favourites.jsx"
+                    class="text-white hover:bg-red-500 hover:text-white rounded-md px-3 py-2"
+                  >
+                    Favourites
+                  </a>
+                  <a
+                    href="Search.jsx"
+                    class="text-white hover:bg-red-500 hover:text-white rounded-md px-3 py-2"
+                  >
                     Search
                   </a>
                 </div>
