@@ -1,5 +1,5 @@
 import React from "react";
-
+import { Link } from "react-router-dom";
 const Navbar = () => {
   return (
     <>
@@ -25,6 +25,7 @@ const Navbar = () => {
                   >
                     Pokemon
                   </a>
+                  <Link to="/about"></Link>
                   <a
                     href="Favourites.jsx"
                     class="text-white hover:bg-red-500 hover:text-white rounded-md px-3 py-2"

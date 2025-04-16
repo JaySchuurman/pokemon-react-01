@@ -1,4 +1,5 @@
 import './components/App.css';
+import { Routes, Route } from 'react-router-dom';
 import Header from "./components/Header";
 import Selected from "./components/Selected";
 import Navbar from "./components/Navbar";
@@ -8,6 +9,14 @@ import AboutMe from './components/AboutMe';
 import Socials from './components/Socials';
 import Footer from './components/Footer';
 import React, { useState, useEffect } from "react";
+
+
+  <Routes>
+    <Route path="/" element={<Home/>}/>
+    <Route path="about" element={<AboutMe/>}/>
+  </Routes>
+
+
 
 const POKEMON_API_URL = "https://pokeapi.co/api/v2/pokemon?limit=1302";
 
